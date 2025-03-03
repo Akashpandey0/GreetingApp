@@ -1,7 +1,7 @@
 package com.example.GreetingApp.controller;
 
-import com.example.greeting_app.model.Greeting;
-import com.example.greeting_app.service.GreetingService;
+import com.example.GreetingApp.model.Greeting;
+import com.example.GreetingApp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,5 +35,11 @@ public class GreetingController {
     @PutMapping("/{id}")
     public Greeting updateGreeting(@PathVariable Long id, @RequestBody Greeting newGreeting) {
         return greetingService.updateGreeting(id, newGreeting);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteGreeting(@PathVariable Long id) {
+        greetingService.deleteGreeting(id);
+        return "Greeting with ID " + id + " deleted successfully!";
     }
 }
