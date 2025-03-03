@@ -1,7 +1,7 @@
 package com.example.GreetingApp.controller;
 
-import com.example.greeting_app.model.Greeting;
-import com.example.greeting_app.service.GreetingService;
+import com.example.GreetingApp.model.Greeting;
+import com.example.GreetingApp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
