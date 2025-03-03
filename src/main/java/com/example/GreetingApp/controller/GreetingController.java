@@ -1,6 +1,6 @@
-package com.example.GreetingApp.Controller;
+package com.example.GreetingApp.controller;
 
-import com.example.greeting_app.service.GreetingService;
+import com.example.GreetingApp.service.GreetingService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
