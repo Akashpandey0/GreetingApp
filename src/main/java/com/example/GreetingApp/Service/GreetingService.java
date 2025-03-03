@@ -3,6 +3,7 @@ package com.example.GreetingApp.Service;
 import com.example.greeting_app.model.Greeting;
 import com.example.greeting_app.repository.GreetingRepository;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 @Service
 public class GreetingService {
@@ -18,8 +19,12 @@ public class GreetingService {
                 .orElseThrow(() -> new RuntimeException("Greeting not found with ID: " + id));
     }
 
-    // ✅ Fix: Save Greeting to Database
     public Greeting saveGreeting(Greeting greeting) {
-        return greetingRepository.save(greeting);  // This ensures data is saved in the database
+        return greetingRepository.save(greeting);
+    }
+
+    // ✅ UC6: Fetch all greeting messages from the repository
+    public List<Greeting> getAllGreetings() {
+        return greetingRepository.findAll();
     }
 }
