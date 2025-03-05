@@ -1,7 +1,9 @@
 package com.example.GreetingApp.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 public class Greeting {
 
@@ -10,28 +12,4 @@ public class Greeting {
     private Long id;
     private String message;
 
-    // Default constructor
-    public Greeting() {}
-
-    // Constructor
-    public Greeting(String message) {
-        this.message = message;
-    }
-
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }
