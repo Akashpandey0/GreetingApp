@@ -1,8 +1,8 @@
 package com.example.GreetingApp.service;
 
-import com.example.greeting_app.model.User;
-import com.example.greeting_app.repository.UserRepository;
-import com.example.greeting_app.security.JwtUtil;
+import com.example.GreetingApp.model.User;
+import com.example.GreetingApp.repository.UserRepository;
+import com.example.GreetingApp.security.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
